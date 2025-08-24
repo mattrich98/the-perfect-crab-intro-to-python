@@ -13,7 +13,7 @@ from lib.helpers import check_that_these_are_equal
 
 # Here's an example:
 
-length = len("Hello!")
+length = len("Hello") #pre-loaded function = javascript method
 print(f"The string is {length} characters long")
 
 # @TASK: Try it out yourself by changing the string "Hello!" above, and then
@@ -40,7 +40,7 @@ old_string = "Hello, YOUR_NAME!"
 new_string = old_string.replace("YOUR_NAME", "Kay")
 
 # Uncomment this next line to see the result:
-# print(new_string)
+print(new_string)
 
 # You'll notice here that the function is coming in a different place. Let's
 # compare `len` and `replace`:
@@ -48,7 +48,7 @@ new_string = old_string.replace("YOUR_NAME", "Kay")
 my_string = "hello"
 
 len(my_string)              # <-- Independent Function
-my_string.replace("h", "w") # <-- Method Function
+my_string.replace("h", "w") # <-- Method Function - maybe because it has multiple parameters 
 
 # Why the difference? It's a little complicated.
 #
@@ -77,7 +77,9 @@ print("Function: uppercase")
 
 def make_uppercase(string):
   # Return the string in uppercase
-  pass
+  return string.upper()
+
+#print(make_uppercase("test"))
 
 check_that_these_are_equal(
   make_uppercase("hello"), "HELLO")
@@ -94,7 +96,8 @@ print("Function: lowercase")
 
 def make_lowercase(string):
   # Return the string in lowercase
-  pass
+  #pass
+  return string.lower()
 
 check_that_these_are_equal(
   make_lowercase("HELLO"), "hello")
@@ -111,7 +114,8 @@ print("Function: strip_whitespace")
 
 def strip_whitespace(string):
   # Return the string with any whitespace removed from the start and end
-  pass
+  #pass
+  return string.strip()
 
 check_that_these_are_equal(
   strip_whitespace("hello "), "hello")

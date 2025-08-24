@@ -17,6 +17,7 @@
 my_dictionary = {
   "String": "A sequence of characters",
   "List": "A sequence of any item",
+  "Dictionary": "An array without index selecting and more detailed variables, the keys are selected differently"
 }
 
 # Note that:
@@ -37,6 +38,9 @@ print("  " + my_dictionary["List"])
 # the code around line 20. Then print out the value below.
 
 print("A Dictionary is:")
+print("  " + my_dictionary["Dictionary"]) #the quotation marks prior are for indentation / style maybe too
 # ...
+
+# a key from a dictionary is selected like this -> dictionaryName["key/item in the dictionaryName"]
 
 # Once you're done, move on to 038_dict_operations.py

@@ -21,7 +21,7 @@ clean_ages = [] # This is our accumulator again
 
 for age in raw_ages: # We go through each age
   # We combine a for with an if to remove 'None' items
-  if age != None:
+  if age != None: #if age is not none, it will add the age to the new list
     clean_ages.append(age)
 
 print(raw_ages)
@@ -36,7 +36,14 @@ print("Function: only_positive_numbers")
 
 # Return a new list with only the positive numbers
 def only_positive_numbers(numbers):
-  pass
+  #pass
+  positiveNumber = []
+
+  for number in numbers:
+    if number > -1:
+      positiveNumber.append(number)
+      #print(positiveNumber), i tested that it worked, it became a lot easier to solve and faster
+  return positiveNumber
 
 check_that_these_are_equal(
   only_positive_numbers([-4, 4, -3, 3]), [4, 3])

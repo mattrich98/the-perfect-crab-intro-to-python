@@ -35,6 +35,8 @@ print(f"Hello, {my_name}!")
 # space you can put a variable into. In fact, you can put any expression in
 # there:
 
+my_name = "Matthew"
+
 print(f"Your name is {len(my_name)} characters long")
 
 # If you're particularly attentive, you might be asking how come Python didn't
@@ -52,8 +54,9 @@ print("")
 print("Function: greet")
 
 def greet(name):
-  # Return the string "Hello, Kay!" where "Kay" is the name provided
-  pass
+  # Return the string "Hello, Kay!" where "Kay" is the name provided 
+  return (f"Hello, {name}!") #Doesn't need print as the test is not asking it to be printed to the console. Parameter does not need brackets either.
+greet("test") #prints Hello, test!
 
 check_that_these_are_equal(
   greet("Chuang-tzu"),

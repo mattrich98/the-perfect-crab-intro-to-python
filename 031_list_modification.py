@@ -8,7 +8,7 @@ from lib.helpers import check_that_these_are_equal
 # Let's look at `append` first:
 
 my_list = ["a", "b", "c"]
-my_list.append("d")
+my_list.append("d") #similar to push in javascript i think
 print(my_list) # my_list is now ["a", "b", "c", "d"]
 
 # The effect is straightforward enough — it adds an item to the list.
@@ -30,7 +30,7 @@ my_list = ["a", "b", "c"]
 my_list.append("d")
 print(my_list) # my_list is now ["a", "b", "c", "d"]
 
-# `my_list` gets magically changed without an assignment!
+# `my_list` gets magically changed without an assignment! #basically saying that it's done without an operator
 
 # The behaviour of append is to modify the list 'in-place'. Don't worry too much
 # about this right now. If you have any trouble with it, you can always create a
@@ -38,6 +38,7 @@ print(my_list) # my_list is now ["a", "b", "c", "d"]
 
 my_list = ["a", "b", "c"]
 my_copy = my_list.copy()
+#print(my_copy)
 my_copy.append("d")
 print(my_list) # my_list is still ["a", "b", "c"]
 print(my_copy) # my_copy is now   ["a", "b", "c", "d"]
@@ -52,9 +53,9 @@ print(my_copy) # my_copy is now   ["a", "b", "c", "d"]
 # I've started it for you.
 
 print("")
-print("Function: append_item_to_list")
+print("Function: append_item_to_list") #add item to list
 
-def append_item_to_list(the_list, item):
+def append_item_to_list(the_list, item): #parameters
   the_list.append(item)
   return the_list
 
@@ -70,6 +71,7 @@ print("Function: remove_item_from_list")
 
 def remove_item_from_list(the_list, item):
   # ...
+  the_list.remove(item)
   return the_list
 
 # If you have trouble here, make sure you're returning the list after removing
@@ -85,7 +87,7 @@ print("")
 print("Function: count_items_in_list")
 
 def count_items_in_list(the_list, item):
-  return # ...
+  return the_list.count(item)# ...
 
 # Whereas here you'll need to return the result of the function you call, not
 # the list.
@@ -100,7 +102,7 @@ print("")
 print("Function: get_index_of_item")
 
 def get_index_of_item(the_list, item):
-  return # ...
+  return the_list.index(item)# ...
 
 check_that_these_are_equal(
   get_index_of_item(['a', 'b', 'c'], 'b'), 1)
@@ -114,6 +116,7 @@ print("Function: reverse_list")
 
 def reverse_list(the_list):
   # ...
+  the_list.reverse() #needs brackets on end
   return the_list
 
 check_that_these_are_equal(
@@ -128,7 +131,7 @@ print("Function: list_length")
 
 # Note — it's the same as for strings!
 def list_length(the_list):
-  return # ...
+  return len(the_list)# ...
 
 check_that_these_are_equal(
   list_length(['a', 'b', 'c']), 3)

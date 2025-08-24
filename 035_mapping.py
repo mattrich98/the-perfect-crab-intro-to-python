@@ -16,15 +16,30 @@ from lib.helpers import check_that_these_are_equal
 
 words = ['I', 'need', 'another', 'five', 'years']
 
-first_letters = [] # This is our accumulator again
+first_letters = [] # This is our accumulator again -> this is where the results will be stored
 
-for word in words: # We go through each word
-  first_letter = word[0] # Get the first letter
+for word in words: # We go through each word , word is the iterator of the words array
+  first_letter = word[0] # Get the first letter -> think this is the index
   # And append it to our accumulator list:
-  first_letters.append(first_letter)
+  first_letters.append(first_letter) #it cycles through the words array 5 times
 
 print(words)
 print(first_letters)
+
+
+#testing code
+
+numberList = [1,2,3,4]
+
+editList = []
+
+for number in numberList:
+  edit = number + 100
+  editList.append(edit)
+
+print(editList) #[101,102,103,104]
+
+#testing code
 
 # @TASK: run this program to see what it does.
 
@@ -35,7 +50,19 @@ print("Function: add_one_hundred_to_numbers")
 
 # Return a new list of each number with 100 added
 def add_one_hundred_to_numbers(numbers):
-  pass
+  #pass
+  hundredList = []
+
+  for number in numbers:
+    #print(number)
+    edit = number + 100
+    #print(edit) #test that i have the results, 101,102,103,104, just need to add to array/list
+    hundredList.append(edit) 
+    #by doing hundredlist print, i could test the results are appended
+  return hundredList #returns hundredList is the result of using the function
+
+  #overall conclusion is to make use of print more to test what I am doing
+
 
 check_that_these_are_equal(
   add_one_hundred_to_numbers([1, 2, 3, 4]), [101, 102, 103, 104])

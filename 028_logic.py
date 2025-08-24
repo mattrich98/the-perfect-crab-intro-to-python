@@ -57,7 +57,8 @@ print("Function: a_and_b")
 
 def a_and_b(a, b):
   # return a ?? b
-  pass
+  #pass
+  return a and b
 
 check_that_these_are_equal(a_and_b(True, True), True)
 check_that_these_are_equal(a_and_b(True, False), False)
@@ -73,7 +74,8 @@ print("Function: not_a")
 # value second.
 def not_a(a):
   # return ?? a
-  pass
+  #pass
+  return not a
 
 check_that_these_are_equal(not_a(True), False)
 check_that_these_are_equal(not_a(False), True)

@@ -34,7 +34,7 @@ while i < 10:
 # the block for as long as the condition is True.
 
 # @TASK: Here's an exercise where you can put it into practice:
-
+print("test")
 print("")
 print("Function: add_cats_repeatedly")
 
@@ -44,9 +44,17 @@ print("Function: add_cats_repeatedly")
 #    add_cats_repeatedly([], 3)
 # => ['cats', 'cats', 'cats']
 
-def add_cats_repeatedly(word_list, count):
+#adding cats not dogs, so will use cat word
+
+def add_cats_repeatedly(word_list, count): 
   # ...
-  return word_list
+  i = 0
+  while i < count:
+    word_list.append("cats")
+    i = i + 1
+  return word_list #didn't work because return was in while loop
+
+
 
 check_that_these_are_equal(
   add_cats_repeatedly([], 3), ['cats', 'cats', 'cats'])

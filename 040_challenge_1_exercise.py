@@ -6,10 +6,12 @@ from lib.helpers import check_that_these_are_equal
 
 # Note that the exercise will be (a little) less challenging than the example.
 
-# Write a function that takes a list of words and returns a report of all the
-# words that are longer than 10 characters but don't contain a hyphen. If those
-# words are longer than 15 characters, then they should be shortened to 15
-# characters and have an ellipsis (...) added to the end.
+#1. Write a function that takes a list of words 
+#2. returns words that are longer than 10 characters 
+#3. but don't contain a hyphen. 
+#4. If longer than 15 characters, shorten to 15 characters and have an ellipsis (...) on end.
+
+#hyphen is a dash -
 
 # For example, if the input is:
 # [
@@ -28,7 +30,20 @@ print("")
 print("Function: report_long_words")
 
 def report_long_words(words):
-  pass
+  #pass
+  regulated = []
+  sentence = "These words are quite long: " 
+  test = sentence.append(regulated)
+
+  for word in words:
+    if len(word) > 10:
+      print("testing")
+      regulated.append(word)
+
+  print(test)
+
+
+  return test
 
 check_that_these_are_equal(
   report_long_words([
